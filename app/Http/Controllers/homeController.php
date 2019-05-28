@@ -14,8 +14,11 @@ class homeController extends Controller
    	 }
    	 public function question()
    	 {
-   	 	$question = DB::table('questions')->get();
-   	 	//	return $question;
+   	 	for($i=1;$i<=2;$i++){
+   	 	$question = DB::table('questions')->where('id',$i)->get();
+
+   	 	//return $question;
    	 	return view('question',compact('question'));
+   	 }
    	 }
 }

@@ -1,11 +1,14 @@
-@extends('layout.app')
 
-@section('title','Quiz')
-
-@section('body')
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quiz </title>
+</head>
+<body>
 
 	@foreach ($question as $display)
 	<h4> {{$display->question}}</h4>
 	@endforeach
 
-@endsection
+</body>
+</html>
